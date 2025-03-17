@@ -1,0 +1,33 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			@media screen and (max-width: 720px) {
+				body {
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>👋 Hello, Everyone!</h1>
+			<p>
+				Welcome to my blog! I'm excited to share my thoughts, 
+				experiences, and knowledge with you. Whether you're 
+				here for the first time or a regular visitor, I hope 
+				you find something of interest.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
